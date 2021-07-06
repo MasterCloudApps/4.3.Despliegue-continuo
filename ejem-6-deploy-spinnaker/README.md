@@ -68,7 +68,9 @@ hal config provider kubernetes account add ${ACCOUNT} \
 hal config deploy edit --type distributed --account-name $ACCOUNT
 ```
 
-## 2. Configuramos persistencia para Haylard
+## 2. Configuramos persistencia para Spinnaker
+
+> TODO: Ver si puede ser opcional con minikube
 
 Spinnaker necesita para persistir la información un almacenamiento externo. Esto se suele hacer en proveedores externos, como AWS S3. Desplegaremos Minio por comodidad para poder usar un servicio similar a S3 para hacer persistencia. Lo desplegaremos localmente como ejemplo. Utilizaremos minio para este ejemplo, pero otros proveedores como S3 pueden ser utilizados.
 
