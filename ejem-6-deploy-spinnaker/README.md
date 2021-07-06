@@ -131,7 +131,7 @@ Desplegamos:
 hal deploy apply
 ```
 
-Y nos conectamos. Este comando redirije las peticiones a localhost para que podamos acceder con localhost:
+Y nos conectamos. Este comando redirije las peticiones al cluster para que podamos acceder con localhost...
 
 ```bash
 hal deploy connect
