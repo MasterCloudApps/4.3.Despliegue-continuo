@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zerodowntime
+  labels:
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zerodowntime
+  template:
+    metadata:
+      labels:
+        app: zerodowntime
+    spec:
+      containers:
+      - name: zerodowntime
+        image: docker.io/gortazar/flyway:v1
+        resources:
+          requests:
+            cpu: "100m"
+        imagePullPolicy: IfNotPresent #Always
+        ports:
+        - containerPort: 9991
+        env:
+        - name: MYSQL_HOST
+          value: "db"
+        - name: SERVER_PORT
+          value: "9991"
+        - name: SPRING_FLYWAY_VALIDATE-ON-MIGRATE
+          value: "false"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: zerodowntime
+  labels:
+    app: zerodowntime
+spec:
+  ports:
+  - port: 9991
+    name: http
+  selector:
+    app: zerodowntime
