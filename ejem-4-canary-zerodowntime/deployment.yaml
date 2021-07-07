@@ -30,6 +30,8 @@ spec:
           value: "db-flyway"
         - name: SERVER_PORT
           value: "9991"
+        - name: SPRING_FLYWAY_VALIDATE-ON-MIGRATE
+          value: "false"
 ---
 apiVersion: v1
 kind: Service
