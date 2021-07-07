@@ -32,11 +32,13 @@ Podríamos instalar la herramienta nativamente en Linux, pero vamos a utilizar u
 El siguiente comando arrancará Halyard usando docker y compartiendo todos los volumenes necesarios para trabajar con kubectl:
 
 ```bash
-docker run --name halyard --rm -d --network host  -v "${HOME}"/.hal:/home/spinnaker/.hal \
+docker run --name halyard --rm -d --network host \
     -v "${HOME}"/.kube/:/home/spinnaker/.kube -v ~/.kube/:/root/.kube -v "${HOME}"/.minikube/:/root/.minikube \
     -v "${HOME}"/.minikube/:"${HOME}"/.minikube -it ghcr.io/ahmetozer/halyard-container &&
     docker logs -f halyard
 ```
+
+> Nota: Si se quiere mantener persistencia de halyard hay que compartir el volumen `-v "${HOME}"/.hal:/home/spinnaker/.hal` pero para la demo no es necesario.
 
 Cuando el contenedor muestre `Halyard started` estaremos listos para comenzar la instalación.
 Ejecutamos una sesión de bash dentro:
