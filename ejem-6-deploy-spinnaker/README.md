@@ -107,7 +107,7 @@ hal config storage edit --type s3
 hal config storage s3 edit --path-style-access=true
 ```
 
-### 4. Desplegamos Spinakker en minikube
+### 4. Desplegamos Spinnaker en minikube
 
 Seleccionamos una versión:
 
