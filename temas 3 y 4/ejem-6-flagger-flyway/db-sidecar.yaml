@@ -1,0 +1,25 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Sidecar
+metadata:
+  name: no-ip-tables
+  namespace: zero
+spec:
+  workloadSelector:
+    labels:
+      app: db3
+  ingress:
+  - port:
+      number: 3306 
+      protocol: HTTP
+      name: ingressmysql
+    defaultEndpoint: 127.0.0.1:3306
+    captureMode: NONE # not needed if metadata is set for entire proxy
+  egress:
+  - port:
+      number: 3306
+      protocol: MYSQL
+      name: egressmysql
+    captureMode: NONE # not needed if metadata is set for entire proxy
+    bind: 127.0.0.1
+    hosts:
+    - "*/*" # Todos los hosts / todos los DNS

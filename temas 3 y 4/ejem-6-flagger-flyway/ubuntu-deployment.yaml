@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: zerodowntime
   labels:
+    app: zerodowntime
 spec:
   replicas: 1
   selector:
@@ -15,7 +16,7 @@ spec:
     spec:
       containers:
       - name: zerodowntime
-        image: docker.io/gortazar/flyway:v1
+        image: docker.io/ubuntu:latest
         resources:
           requests:
             cpu: "100m"

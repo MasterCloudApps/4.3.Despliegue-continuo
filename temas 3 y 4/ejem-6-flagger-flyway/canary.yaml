@@ -2,7 +2,7 @@ apiVersion: flagger.app/v1beta1
 kind: Canary
 metadata:
   name: zerodowntime
-  namespace: flyway
+  namespace: zero
 spec:
   # deployment reference
   targetRef:
