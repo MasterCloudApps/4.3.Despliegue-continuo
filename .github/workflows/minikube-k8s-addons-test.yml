@@ -1,0 +1,27 @@
+name: CI
+on:
+  - push
+jobs:
+  minikube:
+    runs-on: ubuntu-latest
+    name: Minikube - k8s compliance verification
+    strategy:
+      matrix:
+        k8s: [1.21, 1.22, 1.23, 1.24]
+    steps:
+    - name: start minikube
+      id: minikube
+      with:
+        minikube-version: 1.25.0
+        driver: docker
+        kubernetes-version: v${{ matrix.k8s }}
+        cpus: 4
+        memory: 4000m
+      uses: medyagh/setup-minikube@master
+    # now you can run kubectl to see the pods in the cluster
+    - name: istio-provisioner
+      run: minikube addons enable istio-provisioner
+    - name: istio
+      run: minikube addons enable istio
+    - name: metrics-server
+      run: minikube addons enable metrics-server
