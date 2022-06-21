@@ -15,7 +15,8 @@ jobs:
         minikube-version: 1.25.0
         driver: docker
         kubernetes-version: ${{ matrix.k8s }}
-        cpus: 4
+        # Only 2 cpus are available in gh runners
+        cpus: 2
         memory: 4000m
       uses: medyagh/setup-minikube@master
     # now you can run kubectl to see the pods in the cluster
