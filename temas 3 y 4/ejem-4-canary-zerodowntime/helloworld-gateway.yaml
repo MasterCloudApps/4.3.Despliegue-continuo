@@ -1,5 +1,4 @@
-apiVersion: networking.istio.io/v1alpha3
-kind: Gateway
+apiVersion: networking.istio.io/v1beta1
 metadata:
   name: helloworld-gateway
 spec:

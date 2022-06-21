@@ -5,7 +5,7 @@
 1. Start Minikube
 
 ```
-minikube start --profile canary-istio --kubernetes-version v1.20.0
+minikube start --profile canary-istio --kubernetes-version v1.21.0
 ```
 
 2. Enable istio-provisioner and istio
