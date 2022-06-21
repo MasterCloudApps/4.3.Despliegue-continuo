@@ -16,8 +16,8 @@ jobs:
         driver: docker
         kubernetes-version: ${{ matrix.k8s }}
         # Only 2 cpus are available in gh runners
-        cpus: 2
-        memory: 3000m
+        #cpus: 2
+        #memory: 3000m
       uses: medyagh/setup-minikube@master
     # now you can run kubectl to see the pods in the cluster
     - name: istio-provisioner
