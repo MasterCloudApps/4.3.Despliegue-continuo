@@ -7,7 +7,7 @@ jobs:
     name: Minikube - k8s compliance verification
     strategy:
       matrix:
-        k8s: [1.21, 1.22, 1.23, 1.24]
+        k8s: [1.21.0, 1.22.0, 1.23.0, 1.24.0]
     steps:
     - name: start minikube
       id: minikube
