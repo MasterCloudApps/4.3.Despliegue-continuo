@@ -15,6 +15,7 @@ jobs:
         minikube-version: 1.25.0
         driver: docker
         kubernetes-version: ${{ matrix.k8s }}
+        container-runtime: docker
         # Only 2 cpus are available in gh runners
         #cpus: 2
         #memory: 3000m
