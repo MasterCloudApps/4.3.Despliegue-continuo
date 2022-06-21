@@ -14,7 +14,7 @@ jobs:
       with:
         minikube-version: 1.25.0
         driver: docker
-        kubernetes-version: v${{ matrix.k8s }}
+        kubernetes-version: ${{ matrix.k8s }}
         cpus: 4
         memory: 4000m
       uses: medyagh/setup-minikube@master
