@@ -1,0 +1,75 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.3.3.RELEASE)
+
+2020-06-10 18:39:38.378  INFO 29681 --- [           main] sample.flyway.SampleFlywayApplicationV4  : Starting SampleFlywayApplicationV4 v4.0.0 on gortazar with PID 29681 (/home/patxi/git/zero-downtime-deployment/boot-flyway-v4/target/spring-boot-sample-flyway-4.0.0.jar started by patxi in /home/patxi/git/zero-downtime-deployment)
+2020-06-10 18:39:38.382  INFO 29681 --- [           main] sample.flyway.SampleFlywayApplicationV4  : The following profiles are active: standalone
+2020-06-10 18:39:38.471  INFO 29681 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6cfb0489: startup date [Wed Jun 10 18:39:38 CEST 2020]; root of context hierarchy
+2020-06-10 18:39:40.533  INFO 29681 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2020-06-10 18:39:41.914  INFO 29681 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b52c583e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-10 18:39:42.786  INFO 29681 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9994 (http)
+2020-06-10 18:39:42.809  INFO 29681 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2020-06-10 18:39:42.811  INFO 29681 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.32
+2020-06-10 18:39:43.076  INFO 29681 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-10 18:39:43.077  INFO 29681 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4612 ms
+2020-06-10 18:39:44.272  INFO 29681 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2020-06-10 18:39:44.282  INFO 29681 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2020-06-10 18:39:44.283  INFO 29681 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-06-10 18:39:44.283  INFO 29681 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-06-10 18:39:44.283  INFO 29681 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-06-10 18:39:44.284  INFO 29681 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2020-06-10 18:39:44.284  INFO 29681 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2020-06-10 18:39:44.284  INFO 29681 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2020-06-10 18:39:44.796  INFO 29681 --- [           main] o.f.core.internal.util.VersionPrinter    : Flyway 3.2.1 by Boxfuse
+2020-06-10 18:39:45.003  INFO 29681 --- [           main] o.f.c.i.dbsupport.DbSupportFactory       : Database: jdbc:h2:tcp://localhost/~/test (H2 1.4)
+2020-06-10 18:39:45.148  INFO 29681 --- [           main] o.f.core.internal.command.DbValidate     : Validated 4 migrations (execution time 00:00.087s)
+2020-06-10 18:39:45.175  INFO 29681 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": 3
+2020-06-10 18:39:45.176  INFO 29681 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 4 - Remove lastname
+2020-06-10 18:39:45.209  INFO 29681 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.041s).
+2020-06-10 18:39:45.333  INFO 29681 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-06-10 18:39:45.355  INFO 29681 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-06-10 18:39:45.479  INFO 29681 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2020-06-10 18:39:45.483  INFO 29681 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-06-10 18:39:45.485  INFO 29681 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-06-10 18:39:45.911  INFO 29681 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2020-06-10 18:39:46.012  INFO 29681 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-06-10 18:39:46.353  INFO 29681 --- [           main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2020-06-10 18:39:46.701  INFO 29681 --- [           main] o.h.tool.hbm2ddl.SchemaValidator         : HHH000229: Running schema validator
+2020-06-10 18:39:46.702  INFO 29681 --- [           main] o.h.tool.hbm2ddl.SchemaValidator         : HHH000102: Fetching database metadata
+2020-06-10 18:39:46.713  INFO 29681 --- [           main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000261: Table found: TEST.PUBLIC.PERSON
+2020-06-10 18:39:46.714  INFO 29681 --- [           main] o.hibernate.tool.hbm2ddl.TableMetadata   : HHH000037: Columns: [surname, id, first_name]
+2020-06-10 18:39:47.595  INFO 29681 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6cfb0489: startup date [Wed Jun 10 18:39:38 CEST 2020]; root of context hierarchy
+2020-06-10 18:39:47.825  INFO 29681 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/person],methods=[POST]}" onto public sample.flyway.Person sample.flyway.PersonController.generatePerson()
+2020-06-10 18:39:47.829  INFO 29681 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-06-10 18:39:47.830  INFO 29681 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-06-10 18:39:47.913  INFO 29681 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-10 18:39:47.913  INFO 29681 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-10 18:39:48.022  INFO 29681 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-06-10 18:39:49.004  INFO 29681 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2020-06-10 18:39:49.005  INFO 29681 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2020-06-10 18:39:49.006  INFO 29681 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2020-06-10 18:39:49.007  INFO 29681 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2020-06-10 18:39:49.009  INFO 29681 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2020-06-10 18:39:49.013  INFO 29681 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2020-06-10 18:39:49.015  INFO 29681 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2020-06-10 18:39:49.016  INFO 29681 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2020-06-10 18:39:49.017  INFO 29681 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2020-06-10 18:39:49.018  INFO 29681 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2020-06-10 18:39:49.020  INFO 29681 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/flyway || /flyway.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2020-06-10 18:39:49.021  INFO 29681 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2020-06-10 18:39:49.022  INFO 29681 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2020-06-10 18:39:49.359  INFO 29681 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-06-10 18:39:49.380  INFO 29681 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2020-06-10 18:39:49.673  INFO 29681 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9994 (http)
+[Person [firstName=Dave, surname=Syer], Person [firstName=39788bf2-0a80-435c-9f0f-f876ff40e3f6, surname=39788bf2-0a80-435c-9f0f-f876ff40e3f6], Person [firstName=4b6170ec-807b-45cf-9646-ef78113d42b2, surname=4b6170ec-807b-45cf-9646-ef78113d42b2], Person [firstName=40e0aa93-f7f1-4d68-9e97-56ecf602bef1, surname=40e0aa93-f7f1-4d68-9e97-56ecf602bef1], Person [firstName=5282f61a-ba0d-46da-ab5f-ae7f98a703d4, surname=5282f61a-ba0d-46da-ab5f-ae7f98a703d4], Person [firstName=e308c5f8-bda5-456c-aa9b-2f640d47e139, surname=e308c5f8-bda5-456c-aa9b-2f640d47e139]]
+2020-06-10 18:39:50.173  INFO 29681 --- [           main] sample.flyway.SampleFlywayApplicationV4  : Started SampleFlywayApplicationV4 in 12.623 seconds (JVM running for 13.613)
+2020-06-10 18:39:51.686  INFO 29681 --- [nio-9994-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-06-10 18:39:51.686  INFO 29681 --- [nio-9994-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-06-10 18:39:51.721  INFO 29681 --- [nio-9994-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms

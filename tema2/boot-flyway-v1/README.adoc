@@ -1,0 +1,27 @@
+=== Step 1: Initial situation
+
+Version of the app: `1.0.0`
+
+Version of the DB: `v1`
+
+==== Comment
+
+This will be the initial state of the application that we will take into consideration.
+
+==== DB changes
+
+The db contains a column called `last_name`.
+
+[source,sql,indent=0]
+----
+include::src/main/resources/db/migration/V1__init.sql[]
+----
+
+==== Code changes
+
+The app stores the Person data into a column called `last_name`:
+
+[source,java,indent=0]
+----
+include::src/main/java/sample/flyway/Person.java[]
+----
