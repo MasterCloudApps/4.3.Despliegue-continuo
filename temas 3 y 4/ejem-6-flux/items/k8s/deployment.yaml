@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: items
+  namespace: items
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: items
+  template:
+    metadata:
+      labels:
+        name: items
+        version: "1.0.0"
+        app: items
+    spec:
+      containers: 
+        - name: app
+          image: items:1.0.0
+          ports:
+            - name: http
+              containerPort: 8080
