@@ -1,6 +1,0 @@
--- REMOVE THE COLUMN
-ALTER TABLE person DROP last_name;
-
--- ADD CONSTRAINTS
-UPDATE person SET surname='' WHERE surname IS NULL;
-ALTER TABLE person MODIFY surname VARCHAR(255) NOT NULL;
